@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  </head>
+    <div class="container mt-4 mb-4">
+        <div class="row">
+          <span class="h1 text-center mb-3 name">猜數字87%版本</span>
+          <div class="btn-group" role="group">
+            <input type="button" value="開始"class="btn btn-outline-secondary" id="startBtn" onclick=" NumRandom()">
+            <input type="button" value="看答案" class="btn btn-outline-secondary"id="restartBtn" onclick="btn_answer()">
+            <input type="button" value="重來" class="btn btn-outline-secondary" id="seeAnswerBtn" onclick="restart()">
+          </div>
+        </div>
+    </div>
+
+    <div class="container guesses"></div>
+
+     <div class="container">
+        <div>
+            <input type="text"class="form-control" id="textbox" placeholder="輸入4個不重複">
+           <span id ="message"></span><br>
+            <input type="button" value="猜"class="btn btn-outline-secondary" onclick="check()">
+            
+        </div>
+     </div>
+     <div>
+        <ul id="ul">      
+       </ul>
+    </div>
+ <script>
+    let answer;
+    function NumRandom()
+    {
+         var arr=[];
+         var str='';
+         for(i=1;i<=4;i++){
+           str = Math.round( Math.random()*9 );
+           for(j=0;j<arr.length;j++){
+            if(arr[j]==str){
+                arr.splice(j,1);
+                i--;
+               }
+             }
+         arr.push( str);
+        answer=arr;
+        }
+          console.log(arr);    
+    }
+
+    function btn_answer(){
+      let btnans=  document.getElementById("ul")
+      //btnans.innerText =`答案是 ${answer.join("")}`;
+      btnans.innerText ="答案是 :"+answer.join("");
+            console.log("答案是：" +  answer);
+    }
+    function restart(){
+            window.location.reload();
+    }
+    function check(){   
+        let ul = document.querySelector('#ul');
+        let li =document.createElement('li');
+        let a = document.getElementById("textbox").value;
+        if(isNaN(a))
+         {
+            document.getElementById("message").innerHTML="enter整數"
+            return false;
+         }
+        if(a.length<4)
+         {
+            document.getElementById("message").innerHTML="請輸入4個整數"
+            return false;
+         }
+         if(a.length>4)
+         {
+            document.getElementById("message").innerHTML="請輸入4個整數"
+            return false;
+         }
+         if(a.length==4){
+
+            //let ul = document.querySelector('#ul');
+            //let li =document.createElement('li');
+              //  li.innerText=A + "A" + B + "B"; ;
+               // ul.appendChild(li);
+
+             var Dictionary =new Array();
+             var A = 0, B = 0;
+             var Thousand=Math.floor(a/1000);
+             var hundred = Math.floor((a%1000)/100);
+             var Ten = Math.floor((a % 100) / 10);
+             var Bit = Math.floor(a % 10);
+             Dictionary[0] = Thousand;
+             Dictionary[1] = hundred;
+             Dictionary[2] = Ten;
+             Dictionary[3] = Bit;            
+             for (var i = 0; i < 4; i++) {
+                    if (answer[i] == Dictionary[i]) {
+                        A++;
+                        if (A == 4) {
+                            li.style.color="red"
+                            console.log("過關！");
+                        }
+                    }
+                    else {
+                        for (var j = 0; j < 4; j++) {
+                            if (answer[i] == Dictionary[j]) {
+                                B++;
+                                console.log(B);
+                            }
+                        }
+                    }
+                }
+               // li.style.backgroundColor="greed"
+                li.innerText=A + "A" + B + "B"; ;
+                ul.appendChild(li);
+         }      
+    } 
+ </script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
