@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+ input[type=button]
+{
+  background-color: #E3E1B8; 
+}
+
+</style>
+<body>
+    <form name="myform">
+    <p>目前範圍:<span id='small'></span>~<span id='big'></span></p>
+    <div>
+        <input type="button" value="開始" id='num'onclick="ready()">
+    </div>
+    <div>
+    <input type="button" id="myBtn"value="確認" onclick="check()">
+    </div>
+
+    
+
+    <p id="msg"></p><br>
+    <input type="text" name="textBox" id="textBox" value=""/>
+    <div class="body">
+    <div>
+        <input type="button"  name="btnSeven" id="btnSeven" value="1" onclick="setText7(this)">
+        <input type="button" name="btnSeven" id="btnSeven" value="2" onclick="setText7(this)">
+        <input type="button" name="btnSeven" id="btnSeven" value="3" onclick="setText7(this)">
+    </div>
+   <div>
+    <input type="button" name="btnSeven" id="btnSeven" value="4" onclick="setText7(this)">
+    <input type="button" name="btnSeven" id="btnSeven" value="5" onclick="setText7(this)">
+    <input type="button" name="btnSeven" id="btnSeven" value="6" onclick="setText7(this)">
+   </div>
+   <div>
+    <input type="button" name="btnSeven" id="btnSeven" value="7" onclick="setText7(this)">
+    <input type="button" name="btnSeven" id="btnSeven" value="8" onclick="setText7(this)">
+    <input type="button" name="btnSeven" id="btnSeven" value="9" onclick="setText7(this)">
+    <input type="button" name="btnSeven" id="btnSeven" value="0" onclick="setText7(this)">
+   </div>
+</div>
+
+   <div>
+    <input type="button" id="myBtns"value="長太醜才重新開始" onclick="restart()">
+    </div>
+</form>
+    
+<script>
+    let big = 100;
+    let small = 0;
+    let result;
+    let randomnum;
+    let input;
+    let msg;
+    
+  
+   function setText7(obj){
+    var val = obj.value;
+    console.log(val);
+    document.getElementById('textBox').value += val;
+}
+
+document.getElementById("num").style.background='red';
+document.getElementById("myBtn").style.background='red';
+document.getElementById("myBtns").style.background='red';
+
+
+
+function ready(){
+    document.getElementById("msg").innerHTML  = "";
+    document.getElementById('textBox').value = "";
+    document.getElementById('textBox').disabled=false;
+    document.getElementById('myBtn').disabled=false;
+    document.getElementById('myBtns').disabled=false;
+    result = Math.floor(Math.random()*101);
+  console.log(result);
+  document.getElementById('num').disabled=true;
+}
+
+  
+  document.getElementById('big').innerHTML = big;
+  document.getElementById('small').innerHTML = small;
+
+function check(){
+    input = document.getElementById("textBox").value; 
+  
+  if(input=="")
+  {
+    document.getElementById("msg").innerHTML  = "打字阿";
+  }
+  else if(input==12)
+  {
+    document.getElementById("small").innerHTML= input;
+  }else if(result>input&&input<big)
+  {
+    document.getElementById("msg").innerHTML  = '比'+input+'還大';
+    document.getElementById("small").innerHTML=input;
+  }
+  else if(result<input&&input>small)
+  {
+    document.getElementById("msg").innerHTML  = '比'+input+'還小';
+    document.getElementById("big").innerHTML=input;
+  }
+  else if(result==input)
+  {
+    document.getElementById("msg").innerHTML  = "答對了請案重新開始";
+    document.getElementById('textBox').disabled=true;
+    document.getElementById('myBtn').disabled=true;
+    document.getElementById('myBtns').disabled=false;
+    document.getElementById('num').disabled=true;
+    
+  }
+  document.getElementById('textBox').value = "";
+}
+
+function restart(){
+    document.getElementById("msg").innerHTML  = "";
+    document.getElementById('textBox').value = "";
+    document.getElementById('textBox').disabled=true;
+    document.getElementById('myBtn').disabled=true;
+    document.getElementById('myBtns').disabled=true;
+    document.getElementById('num').disabled=false;
+}
+
+</script
+</body>
+</html>
