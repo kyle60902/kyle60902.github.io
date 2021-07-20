@@ -67,7 +67,9 @@
         <li class="dropdown">
             <a href="#" class="dropbtn">品牌電腦</a>
             <div class="dropdown-content" id="pc">
-                
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
             </div>
         </li>
         <li class="dropdown">
@@ -130,8 +132,8 @@ let url ="https://raw.githubusercontent.com/kyle60902/kyle60902.github.io/master
            .then(result =>{
             pcArray =result.Pc;
             partsArray =result.Parts;
-           // console.log(pcArray);
-           // console.log(partsArray);
+            console.log(pcArray);
+            console.log(partsArray);
             //1
             pcMenu = document.querySelector('#pc');
                     pcArray.forEach(function(anchor)
