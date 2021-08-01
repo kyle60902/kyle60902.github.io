@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style>
+    .disflex{
+        display: flex;
+    }
+</style>
+  <body>
+    
+<div class="disflex">
+     <div>
+            <img src="https://picsum.photos/600/600/?random=1">
+    
+     </div>
+    
+     <div>
+        <div>
+            <h1>購買iphone</h1>
+        </div>
+    
+        <div>
+            <p>外觀</p>
+        </div >  
+    
+        <div >
+            <button class="btncolor" id="myBtncolora" type="button"onclick="myFunctioncolora()" value="太空灰色"class="btn btn-outline-primary">Primary
+                <p>太空灰</p>
+            </button>
+            <button class="btncolor" id="myBtncolorb"type="button" onclick="myFunctioncolorb()" value="銀色" class="btn btn-outline-primary">Primary
+                <p>銀色</p>
+            </button>
+        </div>
+        <div>
+            <button class="btncolor" id="myBtncolorc"type="button" onclick="myFunctioncolorc()" value="玫瑰金色"class="btn btn-outline-primary">Primary
+                <p>玫瑰金色</p>
+            </button>
+        </div>
+        <div>
+            <p>儲存裝置</p>
+        </div>  
+        <div>
+            <button id="myBtna" value="64GB" onclick="myFunctiona()"type="button" class="btn btn-outline-primary">
+                <p id="GA" value="64GB">64GB</p>
+                <span>NT$18900起</span>
+            </button>
+            <button id="myBtnb" value="256GB" onclick="myFunctionb()"type="button" class="btn btn-outline-primary">
+                <p id="GB" value="256GB">256GB</p>
+                <span>NT$23900起</span>
+            </button>
+        </div>
+        <div>
+            <p>連線能力</p>
+        </div>
+        <div>
+            <button id="myBtnc" value="Wi-Fi" onclick="myFunctionc()" type="button" class="btn btn-outline-primary">
+                <p>Wi-Fi</p>
+                <span>NT$23200起</span>
+            </button>
+            <button id="myBtnd" value="Cellular" onclick="myFunctiond()" type="button" class="btn btn-outline-primary">
+                <p>Wi-Fi+行動網路</p>
+                <span>NT$28200起</span>
+            </button>
+        </div>
+        <div>
+            <p id="demo"></p>
+        </div>
+
+    </div>
+    
+    </div>
+
+
+
+<script>
+      window.onload = () => {
+            requestIpadJson();
+          
+        }
+    const url = "https://raw.githubusercontent.com/apprunner/FileStorage/master/iPadAir2020_Data.json";
+    
+    //color
+   
+    let _color,_storage,_network ;
+
+
+   let myBtna,myBtnb,myBtnc,myBtnd,myBtnga,myBtngb,mycolora,mycolorb,mycolorc, myBtnstoragea, myBtnstorageb,querry,querryb;
+
+//color
+   myBtncolora=document.getElementById("myBtncolora").value;
+   myBtncolorb=document.getElementById("myBtncolorb").value;
+   myBtncolorc=document.getElementById("myBtncolorc").value;
+
+
+//stroge
+   myBtnstoragea=document.getElementById("myBtna").value;
+   myBtnstorageb=document.getElementById("myBtnb").value;
+  
+//WiFi
+    //23900
+    myBtnc=document.getElementById("myBtnc").value;  
+    myBtnd=document.getElementById("myBtnd").value;
+   
+    //64GB->Wi-Fi=18900 ,
+    //64GB->Wi-Fi+行動網路=18900
+
+    //256->Wi-Fi=23900;
+    //256->Wi-Fi+行動網路=28200;
+  
+
+    let ipadArray = [];
+
+    function requestIpadJson() {
+            let xhr = new XMLHttpRequest();
+            xhr.onload = function () {
+            ipadArray = JSON.parse(this.responseText);
+            };
+            xhr.open("GET", url);
+            xhr.send();
+        }
+
+
+    function myFunctioncolora(){
+        _color="太空灰色"
+        //mycolora = ipadArray.filter(item=>item.color==myBtncolora);
+        console.log(_color);
+    }
+    function myFunctioncolorb(){
+        _color="銀色"
+        console.log(_color);
+       // mycolorb = ipadArray.filter(item=>item.color==myBtncolorb);
+       // console.log(mycolorb);
+    }
+    function myFunctioncolorc(){
+        _color="玫瑰金色"
+        console.log(_color);
+       // mycolorc = ipadArray.filter(item=>item.color==myBtncolorc);
+      //  console.log(mycolorc);
+    }
+
+    function myFunctiona(){
+
+        _storage="64GB";
+        let a =ipadArray.filter(item=>item.color==_color);
+        let b =ipadArray.filter(item=>item.storage==myBtnstoragea);
+        querry = ipadArray.filter(item=>item.color==_color && item.storage==_storage);
+      //  console.log(a);
+       // console.log(b);
+        console.log(_storage);  
+        console.log(querry);  
+      // 
+    
+    }
+    function myFunctionb(){
+        _storage="256GB";
+    }
+    function myFunctionc(){
+        _network="Wi-Fi"
+       // _storage="64GB";
+       // let a =ipadArray.filter(item=>item.color==_color);
+       // let b =ipadArray.filter(item=>item.storage==myBtnstoragea);
+       // let c =ipadArray.filter(item=>item.storage==myBtnc);
+        querryb=ipadArray.filter(item=>item.color==_color&&item.storage==_storage&&item.network==_network);
+        console.log( querryb);
+    
+    }
+    function myFunctiond(){
+        _network="Cellular"
+      let  querryc=ipadArray.filter(item=>item.color==_color&&item.storage==_storage&&item.network==_network);
+        console.log(querryc);
+    }
+
+</script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>
