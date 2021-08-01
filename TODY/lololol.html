@@ -166,10 +166,10 @@
             ];*/
         </script>
 
-    <script type='module'>
-        import { $g } from '../Modules/helpers.js';
-        let row = $g('.row');
-	    let card = $g('#cardPizza');
+    <script >
+       // import { $g } from '../Modules/helpers.js';
+        let row = document.querySelector('.row');
+	    let card =  document.querySelector('#cardPizza');
         //github123
         const url = "https://ddragon.leagueoflegends.com/cdn/10.22.1/data/zh_TW/champion.json";
 
@@ -201,7 +201,7 @@
                   //  alert(championsObject[name].name);
                  // this.setAttribute("data-toggle","modal");
                  // this.setAttribute("data-target","#exampleModal");
-                  let modal=$g("#exampleModal");
+                  let modal=document.querySelector("#exampleModal");
                   modal.querySelector("h5").innerText=championsObject[name].id+'_'+championsObject[name].name;
                   modal.querySelector("#pizzaImage").src=`https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${ namesArray[index]}_0.jpg`;
 
