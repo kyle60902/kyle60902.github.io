@@ -1,0 +1,45 @@
+.modal-backdrop {
+    background-color: red;
+  }
+
+  .modal-header {
+    background-color: rgb(48, 47, 61);
+  }
+
+  .modal-body {
+    background-color: rgb(48, 47, 61);
+  }
+
+  .modal-footer {
+    background-color: rgb(48, 47, 61);
+  }
+
+  .btn-oblong {
+    border-radius: 30px 30px 30px 30px;
+  }
+
+  .footer {
+    text-align: right;
+    padding: 10px;
+  }
+
+  .form-control {
+    background-color: rgb(33, 33, 44)
+  }
+  .container .wrapper{
+    height: 100px;
+    width: 100px;
+    
+  }
+  .btn-close{
+    background-color: white;
+  }
+  .selectionoption{
+    background-color:  rgba(240, 248, 255, 0.267);
+    color: rgba(240, 248, 255, 0.267);
+    border: 1px solid #595656;
+  }
+  html, body {
+    font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
+  }

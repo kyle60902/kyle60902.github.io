@@ -1,0 +1,26 @@
+.container{
+    
+    color: aliceblue;
+  }
+  .text{
+      font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+      color: aliceblue;
+      text-align: left;
+  }
+  .title h2{
+      font-size:20px ;
+      text-align: center;
+      padding: 25px;
+      font-family:monospace;
+        
+  }
+  .text h1{
+      font-size:40px ;
+  }
+  .title{
+      padding: 40px;
+  }
+  html, body {
+    font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
+  }
