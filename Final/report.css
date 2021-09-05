@@ -43,3 +43,47 @@
     font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
     height: 100%;
   }
+  .upload_cover {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    cursor: pointer;
+    background: rgb(33, 33, 44);
+    border: 1px solid #595656;
+  }
+  #upload_input {
+    display: none;
+  }
+  .upload_icon {
+    font-weight: bold;
+    font-size: 180%;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 20%;
+  }
+  .delAvatar {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+  }
+  .modal-open {
+    overflow: inherit;
+  }
+  .modal-body {
+    border: 1px solid #595656;
+  }
+  .bordersize {
+    border: 1px solid #595656;
+  }
+  html, body {
+    font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+    height: 100%;
+  }
+  .modal-content .modal-header{
+    position: relative;
+  }
+  .startcolor{
+    color:red ;
+  }

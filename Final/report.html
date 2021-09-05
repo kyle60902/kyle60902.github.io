@@ -21,11 +21,9 @@
       background: rgb(33, 33, 44);
       border: 1px solid #595656;
     }
-
     #upload_input {
       display: none;
     }
-
     .upload_icon {
       font-weight: bold;
       font-size: 180%;
@@ -34,29 +32,26 @@
       width: 100%;
       top: 20%;
     }
-
     .delAvatar {
       position: absolute;
       right: 2px;
       top: 2px;
     }
-
     .modal-open {
       overflow: inherit;
     }
-
     .modal-body {
       border: 1px solid #595656;
     }
-
     .bordersize {
       border: 1px solid #595656;
-
     }
-
     html, body {
       font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
       height: 100%;
+    }
+    .modal-content .modal-header{
+      position: relative;
     }
   </style>
 </head>
@@ -74,7 +69,7 @@
       <div class="modal-dialog modal-dialog-centered  modal-fullscreen-xl-down">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title border-0 bg-transparent" id="staticBackdropLabel">Contact Us</h5>
+            <h5 class="modal-title " id="staticBackdropLabel">Contact Us</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body border-0 ">
@@ -84,7 +79,7 @@
               For technical issues, please provide screenshots of any error messages received.
               We greatly appreciate any comments or suggestions to improve the website as well!</p>
             <br>
-            <label for="exampleFormControlTextarea1">Description <span style="color:red">*</span> </label>
+            <label for="exampleFormControlTextarea1">Description <span class="startcolor" >*</span> </label>
             <select class="bordersize form-control form-select form-select-lg mb-3"
               aria-label=".form-select-lg example">
               <option value=''>Please select report type</option>
@@ -92,11 +87,11 @@
               <option value="2">Two</option>
               <option value="3">Three</option>
             </select><br>
-            <label for="exampleFormControlTextarea1">Description <span style="color:red">*</span> </label>
+            <label for="exampleFormControlTextarea1">Description <span class="startcolor">*</span> </label>
             <input class="bordersize form-control form-control-lg" type="text"
               placeholder="Please enter report title"><br>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Description <span style="color:red">*</span> </label>
+              <label for="exampleFormControlTextarea1">Description <span class="startcolor">*</span> </label>
               <textarea class="bordersize form-control" id="exampleFormControlTextarea1" rows="3"
                 placeholder="Please enter report title"></textarea><br>
             </div>
@@ -111,7 +106,7 @@
             </div><br>
             <div>
               <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">You Contact Information</label>
+                <label for="exampleFormControlInput1" class="form-label">You Contact Information <span class="startcolor">*</span> </label>
                 <input type="email" class="bordersize form-control" id="exampleFormControlInput1"
                   placeholder="name@example.com">
               </div>
