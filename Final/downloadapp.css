@@ -17,3 +17,6 @@ html, body {
   font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
   height: 100%;
 }
+.swiperpicture img {
+  width: 90%
+}

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="modalreport.css">
+  <title>Hello, world!</title>
+
+</head>
+
+<body>
+  <!-- Button trigger modal -->
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Please use this form to report any violations of our Guidelines or
+            Terms of Service. When reporting a profile, please provide all the
+            requested information so we can quickly resolve the issue.
+            For technical issues, please provide screenshots of any error messages received.
+            We greatly appreciate any comments or suggestions to improve the website as well!</p>
+          <br>
+          <label for="exampleFormControlTextarea1">Type <span class="startcolor">*</span> </label>
+          <select class="bordersize form-control form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <option value=''>Please select report type</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select><br>
+          <label for="exampleFormControlTextarea1">Subject <span class="startcolor">*</span> </label>
+          <input class="bordersize form-control form-control-lg" type="text"
+            placeholder="Please enter report title"><br>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description <span class="startcolor">*</span> </label>
+            <textarea class="bordersize form-control" id="exampleFormControlTextarea1" rows="3"
+              placeholder="Please enter report title"></textarea><br>
+            <label for="exampleFormControlTextarea1">Screenshot <span class="startcolor">*</span> </label>
+          </div>
+          <div class="wrapper">
+            <div class="mb-3">
+              <label class="bordersize upload_cover">
+                <input id="upload_input" type="file">
+                <span class="upload_icon">➕</span>
+                <i class="delAvatar fa fa-times-circle-o" title="刪除"></i>
+              </label>
+            </div>
+          </div>
+          <div>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">You Contact Information<span
+                  class="startcolor">*</span></label>
+              <input type="email" class="bordersize form-control" id="exampleFormControlInput1"
+                placeholder="name@example.com">
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

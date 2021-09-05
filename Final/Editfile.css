@@ -1,0 +1,176 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            margin: auto ;
+            padding: 20px;
+            color: aliceblue;
+            font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+            background-color: rgb(18, 14, 27);
+        }
+        @media screen and (max-width: 767px) {
+            .side-menu {
+                width: 95%;
+            }
+
+            .wrapper{
+                text-align: center;
+            }
+
+            .buttonnone {
+                display: none !important;
+            }
+
+            .spancontent {
+                display: none !important;
+            }
+           
+        }
+        /* 手機橫向 md*/
+        @media screen and (min-width: 768px) {}
+
+        /* iPad橫向 lg*/
+        @media screen and (min-width: 1024px) {
+            .side-menu {
+                width: 200px;
+            }
+
+        }
+        /* iPad Pro橫向 & 桌機 xl*/
+        @media screen and (min-width: 1366px) {}
+        .list-group {
+            padding: 20px;
+            height: 100vh;
+            background-color: rgb(33, 33, 44);
+        }
+        .text a {
+            font-size: 15px;
+            color: white;
+        }
+        .fas {
+            color: #fff;
+        }
+        .side-menu label {
+            position: absolute;
+            width: 40px;
+            height: 80px;
+            top: 0;
+            right: -43px;
+        }
+        .buttonnone {
+
+            border-radius: 10%;
+        }
+        #side-menu-switch {
+            position: absolute;
+            opacity: 0;
+        }
+
+        #side-menu-switch:checked+.side-menu {
+            transform: translateX(0);
+        }
+
+        #side-menu-switch:checked+.side-menu label .fas {
+            transform: scale(-1);
+        }
+
+        .sidebar {
+            z-index: 10;
+            position: fixed;
+        }
+
+        .imagefile img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 70%;
+        }
+        .Profilecenter {
+            text-align: center;
+        }
+
+        html,
+        body {
+            font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+            height: 100%;
+        }
+
+        nav a {
+            margin: 10px;
+            padding: 5px;
+            display: block;
+        }
+
+        .side-menu {
+            z-index: 3;
+            position: fixed;
+            left: 0;
+            top: 0;
+            /* width: 200px; */
+            height: 100vh;
+            transform: translateX(-100%);
+            transition: .3s;
+            background-color: rgb(33, 33, 44);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu a {
+            text-decoration: none;
+            color: #fff;
+
+        }
+
+        .button1 {
+            width: 130px;
+            background-color: rgb(110, 67, 232);
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 14px;
+            padding: 3px 0;
+        }
+
+        .button2 {
+            width: 130px;
+            background-color: rgb(33, 33, 44);
+            ;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            font-size: 14px;
+            padding: 3px 0;
+        }
+
+        .cameraicon {
+            background-color: darkgreen;
+            position: absolute;
+        }
+
+       .catlogo label{
+            position: relative;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            background-image: url(avatar.png);
+            background-position: center;
+        }
+        .catlogo .fas{
+         left: 40px;
+         bottom: 40px;
+        } 
+
+        label~input {
+            overflow: hidden;
+            display: none !important;
+            opacity: 0;
+        }
+
+        label .fas {
+            position: absolute;
+        }
+        .selectcolor{
+           color:  rgba(240, 248, 255, 0.267);
+        }

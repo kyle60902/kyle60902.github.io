@@ -24,3 +24,11 @@
     font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
     height: 100%;
   }
+  body{
+    font-family: Poppins, Roobert, Helvetica Neue, Helvetica, Arial, sans-serif;
+    background-color: rgb(118,72,231);
+    height: 100vh;
+    background-image: url("about.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+}
